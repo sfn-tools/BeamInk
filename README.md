@@ -98,7 +98,7 @@ python3 -m beamink --transport xtool --machine-info
 ### 4. Start a real live session
 
 ```bash
-sudo PYTHONPATH=src python3 -m beamink --transport xtool --source BLUE
+sudo python3 -m beamink --transport xtool --source BLUE
 ```
 
 Recommended first-run sequence:
@@ -125,7 +125,7 @@ Recommended first-run sequence:
 
 ## How The Package Is Organized
 
-The code under `src/beamink/` is split by responsibility:
+The code under `beamink/` is split by responsibility:
 
 - `beamink/__main__.py`
   Runs the package as `python3 -m beamink`.
@@ -213,6 +213,7 @@ If the F1 does not respond:
 
 - verify the host IP in the config, default `201.234.3.1`
 - try `--machine-info` first before a live session
+- Hit the "Stop session" button, this usually returns the F1 to a sane state
 - confirm the USB Ethernet link is up on the host
 
 If you are changing beam behavior:
